@@ -4,12 +4,13 @@ import random
 # make agent class to define attributes and functions
 class Agent:
 
+# use init method to set agents' attributes
     def __init__ (self, environment, agents):
-        self.environment = environment 
+        self.environment = environment                      # pass environment list into agent constructor (able to intract with environment)
         self.stomach = 0
-        self._x = random.randint(0,(len(environment[0])))
+        self._x = random.randint(0,(len(environment[0])))   # give agents random starting pos in environment
         self._y = random.randint(0,(len(environment[1])))
-        self.agents = agents      
+        self.agents = agents                                # pass agents list into agent constructor (able to interact with other agents)
  
 # implement a property attribute for self     
     def set_x(self, value):
